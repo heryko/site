@@ -31,8 +31,8 @@ body {
 
 .image-container {
     position: relative;
-    margin-bottom: 70px; 
-    margin-top: 70px;
+    margin-bottom: 5vh;  /* Reduced margin with vh for better responsiveness */
+    margin-top: 5vh;     /* Reduced margin with vh for better responsiveness */
 }
 
 .image-container .image {
@@ -59,24 +59,24 @@ body {
         width: 25%; 
         margin: 20px 0; 
     }
-
 }
 
 .top-buttons, .bottom-buttons {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 2vh;  /* Adjusted to vh for better responsiveness */
+    margin-bottom: 2vh;  /* Adjusted to vh for better responsiveness */
+    
 }
-
 
 @media (max-width: 600px) {
     .top-buttons, .bottom-buttons {
         flex-direction: column;
         align-items: center;
+        margin-top: 2vh;  /* Adjust top margin */
+        margin-bottom: 2vh;  /* Adjust bottom margin */
     }
-    
 }
 
 .button {
@@ -111,7 +111,7 @@ body {
 @media (max-width: 600px) {
     .button {
         width: 80%;
-        margin-bottom: 10px;
+        margin-bottom: 5vh;  /* Adjust button spacing for smaller screens */
     }
 }
 
@@ -135,7 +135,6 @@ body.loaded .logo-animation {
     transition: opacity 1s; 
     top: 20%;
 }
-
 
 .text-container.left {
     left: 40vw; /* Align to the left */
@@ -177,4 +176,3 @@ body.loaded .logo-animation {
         transform: translateY(5px); /* Optional downward shift */
     }
 }
-
