@@ -1,0 +1,130 @@
+body {
+    font-family: "Times New Roman", Times, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: white;
+}
+
+.services-container {
+    width: 80vh; 
+    flex-direction: column;
+    
+}
+
+.services-list {
+    height: 50vh; 
+    overflow-y: auto; 
+    overflow-x: hidden;
+}
+
+.services-list::-webkit-scrollbar {
+    width: 6px; 
+    margin: 30px;
+}
+
+
+.services-list::-webkit-scrollbar-thumb {
+    background-color: black; 
+    border-radius: 10px; 
+}
+
+.services-list::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+}
+
+.services-list::-webkit-scrollbar-track {
+    background-color: white; 
+    border: 1px solid black; 
+    border-radius: 10px; 
+}
+
+
+/* Stylizacja usługi */
+.service {
+    background-color: white;
+    padding: 10px;
+    border-bottom: 1px solid white; 
+}
+
+.service button {
+    text-transform: uppercase;
+    align-items: center; 
+    width: 95%; 
+    background-color: white; 
+    color: black;
+    font-size: 16px; 
+    border: 1px none black;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, padding 0.3s, font-size 0.3s; 
+    display: inline-flex;  
+    justify-content: center; 
+    
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none;
+    height: 0; 
+    margin: 0;
+    padding: 0;
+}
+
+.description {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.description:not(.hidden) {
+    opacity: 1;
+}
+
+.service button:hover {
+    font-weight: bold;
+    
+}
+
+.service {
+    display: flex;  
+    flex: 1; 
+    justify-content: center;  
+    align-items: center;  
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.bold {
+    font-weight: bold;
+}
+
+.bordered {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-radius: 10px;
+}
+
+.header {
+    font-size: 24px; 
+    font-weight: bold; 
+    text-align: center; 
+    color: black;
+
+}
+.second-button {
+    margin: 15px !important; /* Wymusza odstępy */
+    padding: 10px !important;/* Dopasowanie przestrzeni wewnętrznej */
+}
+
+.promo {
+    color: red; /* Kolor tekstu na czerwony */
+    font-weight: bold; /* Pogrubienie tekstu */
+}

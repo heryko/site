@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmetic Services</title>
+    <link rel="stylesheet" href="style_text_right.css">
+    <script src="code.js" defer></script>
+</head>
+<body>
+
+    <div class="services-container">
+        <div class="services-list">
+
+            <div class="service">
+                <button class="first-button" onclick="toggleSecondButtons(this)">
+                    <span>Pierwsza wizyta w Ewa Szerszon Skin Institute</span>
+                </button>
+                <div class="service-2 hidden">
+                    <p class = "header">Pierwsza wizyta w Ewa Szerszon Skin Institute</p>
+                    <button class="second-button" onclick="toggleDescription(this); toggleBold(this)">
+                        Konsultacja kosmetologiczna
+                    </button>
+                    <div class="description hidden">
+                        <p>Uwzględnia ocenę stanu skóry, dobór odpowiednich zabiegów kosmetologicznych pod kątem obecnych potrzeb skóry oraz odpowiednią pielęgnację domową.</p>
+                        <br>
+                        <p><strong>Cena: </strong> 250zł</p>
+                    </div>
+
+                    <button class="second-button" onclick="toggleDescription(this); toggleBold(this)">
+                        Konsultacja kosmetologiczna + analiza skóry twarzy urządzeniem OBSERVE
+                    </button>
+                    <div class="description hidden">
+                        <p>Uwzględnia ocenę stanu skóry, dobór odpowiednich zabiegów kosmetologicznych pod kątem obecnych potrzeb skóry oraz odpowiednią pielęgnację domową.</p>
+                        <br>
+                        <p><strong>Cena: </strong> 400zł</p>
+                    </div>
+
+                    <button class="second-button" onclick="toggleDescription(this); toggleBold(this)">
+                        Konsultacja kosmetologiczna + analiza skóry twarzy urządzeniem OBSERVE + indywidualnie dobrany zabieg kosmetologiczny
+                    </button>
+                    <div class="description hidden">
+                        <p>Uwzględnia ocenę stanu skóry, dobór odpowiednich zabiegów kosmetologicznych pod kątem obecnych potrzeb skóry, odpowiednią pielęgnację domową i odpowiednio dobrany do potrzeb skóry zabieg kosmetologiczny</p>
+                        <br>
+                        <p><strong>Cena: </strong> 550zł-850zł<br>
+                        (konsultacje kosmetologiczne z analizą OBSERVE liczone w cenie promocyjnej 250 zł + cena indywidualnie dobranego zabiegu kosmetologicznego)</p>
+                    </div>
+
+                    <br><br>
+                    <button class="back-to-first-button hidden" onclick="back()" style="font-size: 30px; padding: 10px; border: none">&#9754;</button>
+                </div>
+            </div>
+
+            <div class="service">
+                <button class="first-button" onclick="toggleSecondButtons(this)">
+                    <span>Primelase - epilacja laserowa</span>
+                </button>
+                <div class="service-2 hidden">
+                    <p class = "header">Primelase - epilacja laserowa</p>
+                    <br>
+                    <button class="second-button" onclick="toggleDescription(this); toggleBold(this)">
+                        Opis
+                    </button>
+                    <div class="description hidden">
+                        Primelase Excellence hiszpańskiej marki Cocoon Medical to laser diodowy o bardzo wysokiej mocy - aż do 4800 W. Jest przede wszystkim laserem do usuwania owłosienia – wysoka moc oraz technologia USP (Ultra Short Pulse) pozwalają na zabiegi impulsami od 3 ms. Osiągamy wtedy odpowiednią temperaturę do zniszczenia mieszków włosowych, bez wpływu na skórę, co sprawia, że zabieg jest skuteczny i bezpieczny. Urządzenie posiada funkcję chłodzenia kontaktowego Crystal Freeze (+ 5ºC) i może pracować w dwóch trybach: statycznym (1-3 Hz) i dynamicznym (5-10 Hz). W większości przypadków po czterech zabiegach następuje bardzo znacząca redukcja włosienia, ok. 70% klientów potrzebuje między 4 a 6 zabiegów, zależnie od części ciała, rodzaju włosa, predyspozycji genetycznych, wieku.
+                    </div>
+            
+                    <button class="second-button" onclick="toggleDescription(this); toggleBold(this)">
+                        Czym się wyróżnia?
+                    </button>
+                    <div class="description hidden">
+                        Dynamiczny tryb pracy – dla bardziej wrażliwych pacjentów dynamiczny tryb pracy, umożliwia wykonanie zabiegu z wykorzystaniem niskich gęstości energii i wielokrotnego naświetlania z wysoką częstotliwością. Szybkość – ma najwyższą częstotliwość impulsów wśród laserów diodowych. Skuteczność – posiada najwyższą moc spośród dostępnych na rynku laserów diodowych. Bezbolesność – aby chronić naskórek i zminimalizować uczucie bólu, system chłodzenia zapewnia stałą temperaturę 6 st. w trakcie całego zabiegu.
+                    </div>
+            
+                    <button class="second-button" onclick="toggleDescription(this); toggleBold(this)">
+                        Przygotowanie
+                    </button>
+                    <div class="description hidden">
+                        Przygotowanie do zabiegu depilacji Primelase: Dzień przed należy ogolić obszar poddawany zabiegowi. Przez minimum 4 tygodnie nie należy usuwać włosów woskiem i depilatorem. Dopuszczalne jest golenie maszynką.
+                    </div>
+
+                    <button class="second-button" onclick="toggleDescription(this); toggleBold(this)">
+                        Cennik
+                    </button>
+                    <div class="description hidden">
+                        <ul>
+                            <li>Wąsik - 150 zł</li>
+                            <li>Pakiet (5+1) Wąsik - 750 zł</li>
+                            <li>Broda - 200 zł</li>
+                            <li>Pakiet (5+1) Broda - 1000 zł</li>
+                            <li>Łydki - 350 zł</li>
+                            <li>Pakiet (5+1) Łydki - 1750 zł</li>
+                            <li>Uda - 400 zł</li>
+                            <li>Pakiet (5+1) Uda - 2000 zł</li>
+                            <li>Całe nogi - 700 zł</li>
+                            <li>Pakiet (5+1) Całe nogi - 3500 zł</li>
+                            <li>Pachy - 250 zł</li>
+                            <li>Pakiet (5+1) Pachy - 1250 zł</li>
+                            <li>Bikini podstawowe - 300 zł</li>
+                            <li>Pakiet (5+1) Bikini podstawowe - 1500 zł</li>
+                            <li>Bikini głębokie - 400 zł</li>
+                            <li>Pakiet (5+1) Bikini głębokie - 2000 zł</li>
+                            <li>Brzuch - 250 zł</li>
+                            <li>Pakiet (5+1) Brzuch - 1250 zł</li>
+                            <li>Plecy - 450 zł</li>
+                            <li>Pakiet (5+1) Plecy - 2250 zł</li>
+                            <li>Przedramiona - 250 zł</li>
+                            <li>Pakiet (5+1) Przedramiona - 1250 zł</li>
+                            <li>Ramiona - 250 zł</li>
+                            <li>Pakiet (5+1) Ramiona - 1250 zł</li>
+                            <li>Całe ręce - 450 zł</li>
+                            <li>Pakiet (5+1) Całe ręce - 2250 zł</li>
+                            <li>Klatka piersiowa - 350 zł</li>
+                            <li>Pakiet (5+1) Klatka piersiowa - 1750 zł</li>
+                            <li>Okolice brodawek - 150 zł</li>
+                            <li>Pakiet (5+1) Okolice brodawek - 750 zł</li>
+                            <li>Palce u stóp - 150 zł</li>
+                            <li>Pakiet (5+1) Palce u stóp - 750 zł</li>
+                            <li>Pośladki - 300 zł</li>
+                            <li>Pakiet (5+1) Pośladki - 750 zł</li>
+                            <li>Szyja, kark - 250 zł</li>
+                            <li>Pakiet (5+1) Szyja, kark - 1250 zł</li>
+                            <li>Stopy - 200 zł</li>
+                            <li>Pakiet (5+1) Stopy - 1000 zł</li>
+                            <li>Uszy - 100 zł</li>
+                            <li>Pakiet (5+1) Uszy - 500 zł</li>
+                            <li>Baczki - 200 zł</li>
+                            <li>Pakiet (5+1) Baczki - 1000 zł</li>
+                        </ul>
+                    </div>
+                    <br><br>
+                    <button class="back-to-first-button hidden" onclick="back()" style="font-size: 30px; padding: 10px; border: none">&#9754;</button>
+                </div>
+            </div>
+
+            <div class="service">
+                <button class="first-button" onclick="toggleSecondButtons(this)">
+                    <span>Endermologie LPG ®</span>
+                </button>
+                <div class="service-2 hidden">
+                    <p class = "header">Endermologie LPG ®</p>
+                    Endermologia to mechaniczny masaż podciśnieniowy oddziałujący na tkankę łączną. Endermologia może być stosowana jako zabieg pielęgnacyjny twarzy i ciała, z wyjątkiem piersi. Masaż połączony z podciśnieniem wspomaga uaktywnienie metabolizmu tkanki tłuszczowej, a w rezultacie stymuluje produkcję włókien kolagenowych. Efekty, jakie może przynieść endermologia zastosowana w odpowiedniej ilości serii to redukcja tkanki tłuszczowej, likwidacja cellulitu, modelowanie sylwetki i poprawa konturu twarzy. Endermologia to prawdziwe zbawienie w walce o idealnie gładką skórę i sylwetkę, zwłaszcza w sytuacjach, kiedy zdrowa dieta czy regularne ćwiczenia nie przynoszą pożądanych efektów.
+                    Przy zakupie pakietu kostium do endermologii jest w cenie.
+                    Do pojedynczego zabiegu endermologii LPG doliczany jest kostium w cenie 150zł. Jeśli posiadasz już oryginalny kostium LPG możesz wziąć go ze są na zabieg.
+                    
+                    <br><br>
+                    <p><strong>Cena: </strong> 180,00 zł<br>
+                    <p><strong>Pakiet 10 zabiegów cena: </strong> 1600,00 zł</p>
+
+                    <br><br>
+                    <button class="back-to-first-button hidden" onclick="back()" style="font-size: 30px; padding: 10px; border: none">&#9754;</button>
+                    </div>
+            </div>
+
+            
+            <div class="service">
+                <button class="first-button" onclick="toggleSecondButtons(this)">
+                    <span>Endermolift LPG ®</span>
+                </button>
+                <div class="service-2 hidden">
+                    <p class = "header">Endermolift LPG ®</p>
+                    Opatentowana głowica zabiegowa LPG® generuje mikroimpulsy na całej powierzchni twarzy i szyi, co stanowi prawdziwy trening dla osłabionej skóry oraz głęboko stymuluje proces syntezy fibroblastów:
+                    • produkcja nowego kolagenu dobrej jakości oraz naturalnego kwasu hialuronowego (+80%*) pozwala przywrócić objętość skóry właściwej, a także „wypełnić” kontury zmarszczek.
+                    • synteza elastyny (+46%*) w skórze sprawia, że staje się ona bardziej elastyczna i odporna na liczne mikroskurcze mięśni, które często są powodem powstawania „zmarszczek mimicznych”.
+                    • ta unikalna, bezbolesna stymulacja polega na delikatnym złuszczaniu skóry, dotleniając tkankę i aktywując mikrocyrkulację w celu ujednolicenia cery.
+
+                    <br><br>
+                    <p><strong>Cena: </strong> 170 zł</p>
+                    <p><strong>10 zabiegów -</strong> 1500zł</p>
+                    <p><strong>Dodatek do zabiegu kosmetologicznego -</strong> 70 zł</p>
+
+
+                    <br><br>
+                    <button class="back-to-first-button hidden" onclick="back()" style="font-size: 30px; padding: 10px; border: none">&#9754;</button>
+                </div>
+            </div>
+
+
+            <div class="service">
+                <button class="first-button" onclick="toggleSecondButtons(this)">
+                    <span>Dermapen™ 4- mezoterapia mikroigłowa</span>
+                </button>
+                <div class="service-2 hidden">
+                    <p class = "header">Dermapen™ 4- mezoterapia mikroigłowa</p>
+                    <button class="second-button" onclick="toggleDescription(this); toggleBold(this)">
+                        Opis
+                    </button>
+                    <div class="description hidden">
+                        <p>Najnowszy Dermapen™ jest jedynym w pełni cyfrowym oryginalnym urządzeniem do mikronakłuwania frakcyjnego skóry.L
+                        DERMAPEN™ 4 gładko przesuwa się po skórze, tworząc miliony drobnych, pionowych kanałów frakcyjnych do 104% szybciej niż inne peny mikroigłowe. Kanały te mogą przenosić do 80% więcej składników odżywczych w głąb skóry.
+                        Mikrourazy uruchamiają naturalny proces naprawy, zwiększając produkcję kolagenu i elastyny dając lekarzom i kosmetologom idealne narzędzie do leczenia wielu niedoskonałości skóry.</p>
+                    </div>
+
+                    <button class="second-button" onclick="toggleDescription(this); toggleBold(this)">
+                        Dermapen™ 4 + MG COLLECTION
+                    </button>
+                    <div class="description hidden">
+                        <p>Zabieg łączony jest z dedykowanymi ampułkami MG Collection. Unikalna linia pięciu produktów o silnie skoncentrowanych składnikach czynnych przeznaczonych do rozwiązywania konkretnych problemów skórnych. MG Collection to najwyższy standard infuzji substancji czynnych w protokołach z mikronakłuwaniem frakcyjnym DERMAPEN™.</p>
+                        <br>
+                        <p><strong>Twarz + Szyja - </strong>800zł</p>
+                        <p><strong>Twarz + Szyja (pakiet 4 zabiegów)  - </strong>2950zł</p>
+                        <p><strong>Twarz + Szyja + Dekolt - </strong>950zł</p>
+                        <p><strong>Twarz + Szyja + Dekolt (pakiet 4 zabiegów)  - </strong>3500zł</p>
+                    </div>
+
+                    <button class="second-button" onclick="toggleDescription(this); toggleBold(this)">
+                        DERMAPEN™ 4 + Uber Peel Pro
+                    </button>
+                    <div class="description hidden">
+                        <p>Zabieg łączony jest z czynnikami wzrostu.
+                            P1P to unikalna linia aktywnych kosmeceutyków medycznych opartych na czynnikach wzrostu i innowacyjnym fospolipidzie sygnałowym Fitosfingozyno-1-fosforanie. Medyczne formuły P1P pozwalają na ich zastosowanie zarówno w codziennej pielęgnacji jak i w procedurach mikronakłuwania frakcyjnego w kilku podstawowych wskazaniach - leczenie przebarwień, skóry problematycznej czy globalnych terapiach anti-aging.
+                            Oligopeptide-1 (EGF, Epidermal Growh Factor) Czynnik wzrostu komórek naskórka, stymuluje proliferację i wzrost komórek.
+                            Oligopeptide-2 (IGF-1, Insulin-like Growth Factor-1) Uczestniczy w hamowaniu apoptozy i proliferacji oraz wzroście komórek. Insulinopodobny czynnik wzrostu komórek, występujący w dużych ilościach n.p. w młodym (rosnącym) organizmie i u kobiet w ciąży. Jego zawartość we krwi spada wraz ze starzeniem się organizmu.
+                            Oligopeptide-3 (TGF-α, Transforming Growth Factor-α) TGF-α może być wytwarzany w makrofagach, komórkach mózgowych i keratynocytach. TGF-α indukuje rozwój nabłonka. Biorąc pod uwagę, że TGF-α należy do rodziny EGF, biologiczne działanie TGF-α i EGF są podobne. Wiążą się one z tym samym receptorem. Kiedy TGF-α wiąże się z EGFR, inicjuje proliferację komórek. TGF-α jest również czynnikiem wzrostu promującym angiogenezę.
+                            Hexapeptide -11 (aFGF, acidic Fibroblast Growth Factor) Kwaśny czynnik wzrostu fibroblastów odgrywa kluczową rolę w procesie proliferacji komórek, działając zarówno na powierzchni jak i wewnątrz komórek.
+                            Hexapeptide -9 (VEGF, Vascular Endothelial Growth Factor) Proteina odpowiedzialna za tworzenie się nowych naczyń krwionośnych. Palmitoyl Tripeptide-1 (Tripeptyd-1) Wykazuje działanie przeciwzapalne, stymuluje fibroblasty do produkcji kolagenu i elastyny, znacząco przyspiesza gojenie i regenerację skóry</p>
+                        <br>
+                        <p><strong>Twarz + Szyja - </strong>1000zł</p>
+                        <p><strong>Twarz + Szyja (pakiet 4 zabiegów)  - </strong>3600zł</p>
+                        <p><strong>Twarz + Szyja + Dekolt - </strong>1150zł</p>
+                        <p><strong>Twarz + Szyja + Dekolt (pakiet 4 zabiegów)  - </strong>4200zł</p>
+                    </div>
+
+                    <button class="second-button" onclick="toggleDescription(this); toggleBold(this)">
+                        DERMAPEN™ 4 + czynniki wzrostu
+                    </button>
+                    <div class="description hidden">
+                        <p>Uber Peel Pro to mieszanka wielu składników czynnych, która wnika w miejsca mikronakłuć po zabiegu Dermapen. Specjalne związki buforujące zawarte w pilingu kontrolują, by substancje aktywne uwalniały się w głąb skóry powoli. Dzięki temu preparat jest skuteczny bez stosowania w nim wysokich i agresywnych stężeń kwasów. W efekcie naskórek zostaje odbudowany, w skórze następuje stymulacja kolagenu i elastyny. Dodatkowo zniwelowane zostają przebarwienia, a skóra zyskuje świeży, promienny wygląd.
+                            W skład Uber Peel Pro wchodzą:KWAS MIGDAŁOWY 25% – pobudza syntezę kolagenu, redukuje przebarwienia, kontroluje wydzielanie serum, leczy skórę skłonną do trądziku.
+                            KWAS MLEKOWY 5% – rozjaśnia skórę i silnie ją nawilża, złuszcza martwe komórki naskórka.
+                            REZORCYNA 5% – działa keratolitycznie, redukuje widoczność blizn, idealna do skóry problematycznej i skłonnej do trądziku.
+                            KWAS HIALURONOWY 5% – kompleks HylaFuse, dzięki trzem różnym wielkościom cząsteczek kwasu hialuronowego nawilża nawet głębokie warstwy skóry.
+                            KWAS PIROGRONOWY 5% – wykazuje właściwości antyoksydacyjne i naprawcze, rozjaśnia przebarwienia.
+                            KWAS KOJOWY 2% – silny inhibitor tyrozynazy, redukuje przebarwienia i zapobiega ich powstaniu.
+                            RETINALDEHYD 0,1% – stymulator produkcji kolagenu w skórze, działa przeciwzmarszczkowo i przeciwzapalnie.
+                            KWAS FERULOWY 0,5% – jeden z najsilniejszych antyoksydantów, chroni skórę przed działaniem czynników zewnętrznych, ujednolica koloryt skóry.
+                            ARBUTYNA 5% – inhibitor tyrozynazy, redukuje przebarwienia.
+                            TRIPEPTYD MIEDZIOWY-1 1% – stymuluje produkcję kolagenu, inicjuje procesy naprawcze skóry i przyspiesza jej gojenie.
+                            NIACINAMID 5% – stymuluje proliferację fibroblastów, przyspiesza mikrokrążenie, natlenienie skóry i procesy naprawcze, działa przeciwzapalnie.
+                            Efekty:* wygładzenie zmarszczek* rozjaśnienie skóry* niwelowanie trądziku* zwężenie porów* niwelowanie przebarwień,* wygładzenie tekstury skóry* redukcja blizn i rozstępów* stymulacja produkcji kolagenu
+                            </p>
+                        <br>
+                        <p><strong>Twarz + Szyja - </strong>1000zł</p>
+                        <p><strong>Twarz + Szyja (pakiet 4 zabiegów)  - </strong>3600zł</p>
+                        <p><strong>Twarz + Szyja + Dekolt - </strong>1150zł</p>
+                        <p><strong>Twarz + Szyja + Dekolt (pakiet 4 zabiegów)  - </strong>4200zł</p>
+                    </div>
+
+
+                    <button class="second-button" onclick="toggleDescription(this); toggleBold(this)">
+                        DERMAPEN™ 4 + PRO XN
+                    </button>
+                    <div class="description hidden">
+                        <p>1 – XANTHOHUMOL COMPLEX AMPOULE
+                            Skład oparty o kompleks Ksantohumolu dodatkowo wzbogacony o substancje niezbędne do prawidłowych procesów odbudowy skóry: dysmutazę ponadtlenkową, 3-0 etylowy kwas askorbinowy, niacynamid, koenzym Q10.
+                            2 – STERILE BIOCELL FACIAL MASK
+                            Sterylna biocelulozowa maska wysokiej higroskopijności posiada bardzo dużą zdolność zatrzymywania wody, przez co pełni funkcję podobną do naskórka, zapewniając silne i trwałe uwodnienie. Maska perfekcyjnie przylega do skóry, tworząc idealną okluzję i jednocześnie zwiększa absorbcję substancji aktywnych z XANTHOHUMOL COMPLEX AMPOULE
+                            100%
+                            WSKAZANIA:
+                            • wzmocnienie systemu antyoksydacyjnego skóry po zabiegach naruszających barierę naskórkową, biostymulujących takich jak: mezoterapia mikroigłowa, mezoteria igłowa, laseroterapia, chemabrazja
+                            • skóra uszkodzona, narażona na stres, zaczerwieniona
+                            • zapobieganie nadkażeniom bakteryjnym po zabiegach ablacyjnych,
+                            • działanie wspomagające w terapiach rozjaśniających przebarwienia
+                            • wspomagająco w terapiach skór z trądzikiem różowatym.
+                            100%
+                            KLUCZOWE SKŁADNIKI AKTYWNE:
+                            Ksantohumol Kompleks
+                            Dysmutaza ponadtlenkowa
+                            3-0 etylowy kwas askorbinowy
+                            Koenzym Q10
+                            Niacynamid
+                            Jony srebra</p>
+                        <br>
+                        <p><strong>Twarz + Szyja - </strong>1000zł</p>
+                        <p><strong>Twarz + Szyja (pakiet 4 zabiegów)  - </strong>3600zł</p>
+                        <p><strong>Twarz + Szyja + Dekolt - </strong>1150zł</p>
+                        <p><strong>Twarz + Szyja + Dekolt (pakiet 4 zabiegów)  - </strong>4200zł</p>
+                    </div>
+
+                    <br><br>
+                    <button class="back-to-first-button hidden" onclick="back()" style="font-size: 30px; padding: 10px; border: none">&#9754;</button>
+                </div>
+            </div>
+
+            <div class="service">
+                <button class="first-button" onclick="toggleSecondButtons(this)">
+                    <span>Dermalux ® - fototerapia led</span>
+                </button>
+                <div class="service-2 hidden">
+                    <p class = "header">Dermalux ® - fototerapia led</p>
+                    <button class="second-button" onclick="toggleDescription(this); toggleBold(this)">
+                        Opis
+                     </button>
+                     <div class="description hidden">
+                        Dermalux Flex MD to system nieinwazyjnej fototerapii wykorzystujący fale świetlne o klinicznie potwierdzonym działaniu odmładzającym i korygującym. W trakcie zabiegu skóra absorbuje światło o odpowiedniej długości fali, które stymuluje regenerację komórek i produkcję kolagenu, przyspiesza procesy gojenia oraz redukuje problemy skórne takie jak zaczerwienienie i trądzik. Zabieg jest całkowicie bezbolesny i nie wymaga okresu rekonwalescencji.Po pojedynczej sesji Flex MD klienci mogą spodziewać się natychmiastowego rozjaśnienia skóry oraz poprawy jej kolorytu i poziomu nawilżenia, podczas gdy zainicjowane światłem głębsze procesy komórkowe zapewnią długotrwałe korzyści dla skóry. W przypadku problemów z podrażnieniami, Flex MD przynosi skórze ukojenie i redukuje zaczerwienienia.Flex MD to zabieg będący elementem normalnego cyklu pielęgnacji, zapewniający właściwy stan skóry. Może być także wykorzystywany w terapii skojarzonej z innymi procedurami w celu poprawy i przyspieszenia ich rezultatów.Dermalux Flex MD to urządzenie medyczne posiadające certyfikat CE, przeznaczone do leczenia trądziku, łuszczycy, bólu mięśniowo-szkieletowego oraz gojenia ran.System Dermalux Flex MD wykorzystuje światło o trzech różnych długościach fal: 415 nm - światło niebieskie, 633 nm - światło czerwone oraz 830 nm - światło z zakresu bliskiej podczerwieni. Są to długości fal o klinicznie potwierdzonym zastosowaniu w fototerapii LED.Każda z fal absorbowana jest przez inny chromofor, co umożliwia stymulowania określonych procesów biologicznych, przynoszących klinicznie potwierdzone rezultaty terapeutyczne.Dermalux umożliwia dostarczanie wiązek światła o odpowiedniej długości fali w trybie jedno- lub wielofalowym przy pomocy siedmiu wszechstronnych procedur zabiegowych, które można dostosowywać do konkretnego przypadku. Zabiegi z wykorzystaniem wiązek światła o różnych długościach fali pozwalają przeprowadzać leczenie wielu schorzeń podczas jednej sesji, zapewniając maksymalne rezultaty w zakresie poprawy wyglądu skóry.
+                        System Dermalux Flex MD jest skuteczny w leczeniu wielu chorób dermatologicznych i redukowaniu problemów kosmetycznych na twarzy i ciele.Wskazania do stosowania obejmują między innymi:• Rewitalizacja skóry• Wyrównanie kolorytu cery• Skóra sucha• Przebarwienia: fotouszkodzenia• Przebarwienia• Trądzik: łagodny do średniego• Trądzik: średni do ostrego• Zaczerwienienie: Naczyniowe • Zaczerwienienie: Odcień skóry • Skóra wrażliwa• Skóra wrażliwa: problemy• Łuszczyca• Gojenie ran• Ból
+                        SystemFlexMDmożebyć wykorzystywanyna3sposoby AKTYWACJAProgram intensywnej aktywacji komórek 12 zabiegów 2 lub 3 razy w tygodniu. Po zakończeniu cyklu zalecane jest regularne wykonywanie zabiegów podtrzymujących efekt.NATYCHMIASTOWY BLASKPojedyncze zabiegi lub krótka seria 3 zabiegów rewitalizująca skórę, przywracająca jej blask i łagodząca podrażnienia. Doskonale sprawdza się także jako zabieg kosmetyczny przed ważnym wydarzeniem lub uroczystością.ZABIEG UZUPEŁNIAJĄCYWłączenie zabiegów Dermalux do programu pielęgnacji skóry pomaga uzyskać lepsze i trwalsze efekty.
+                    </div>   
+    
+                    <button class="second-button" onclick="toggleDescription(this); toggleBold(this)">
+                        Cena
+                     </button>
+                     <div class="description hidden">                    
+                        <p><strong>Zabieg (1) - </strong>150zł</p>
+                        <p><strong>Jako dodatek do zabiegu</strong>100zł</p>
+                        <p><strong>Pakiet 10 zabieów</strong>1200zł</p>
+                    </div>
+
+
+                    <br><br>
+                    <button class="back-to-first-button hidden" onclick="back()" style="font-size: 30px; padding: 10px; border: none">&#9754;</button>
+                </div>
+            </div>
+
+
+            <div class="service">
+                <button class="first-button" onclick="toggleSecondButtons(this)">
+                    <span>Virtue RF- Radiofrekwencja mikroigłowa
+                    </span>
+                </button>
+                <div class="service-2 hidden">
+                    <p class = "header">Virtue RF- Radiofrekwencja mikroigłowa</p>
+                    <button class="second-button" onclick="toggleDescription(this); toggleBold(this)">
+                        Opis
+                     </button>
+                     <div class="description hidden">
+                        Radiofrekwencja mikroigłowa VIRTUE RF
+                        Virtue RF to nowoczesna platforma medyczna wykorzystująca mikronakłuwanie skóry wraz z zastosowaniem fal radiowych. Jest to innowacyjna, bezpieczna i precyzyjna metoda.
+                        Radiofrekwencja mikroigłowa to skuteczny, małoinwazyjny i szybki sposób na znaczną poprawę napięcia skóry, wyrównanie jej kolorytu, redukcję zmarszczek i blizn, zwężenie rozszerzonych porów. Wskazaniem do wykonania zabiegu jest więc skóra potrzebująca odmłodzenia, ujędrnienia, wyrównania struktury, wymagająca redukcji zarówno drobnych, jak i głębokich zmarszczek, blizn czy rozstępów.
+                        Innowacyjne urządzenie pozwala na precyzyjną regulację głębokości igieł (od 0,1mm do 3,5mm), częstotliwości i intensywności działania, dzięki czemu istnieje możliwość dostosowania zabiegu indywidualnie do potrzeb każdej skóry. To bezpieczny i praktycznie bezbolesny zabieg, pozwalający uzyskać rezultat pięknej, jędrnej i gładkiej skóry bez okresu rekonwalescencji.
+                        Energia fal radiowych stosowana jest w zabiegach odmładzających, rozgrzewa włókna kolagenowe, czego efektem jest ich przebudowa, a w konsekwencji poprawa jakości skóry. Następuje stymulacja fibroblastów do wytwarzania kolagenu i elastyny, dając efekt wypełnienia zmarszczek. Zwiększa się gęstość skóry, elastyczność i jej napięcie. Po zabiegu wykonanym na twarz obserwujemy również poprawę jej owalu. Fale radiowe stymulują tkanki powierzchowne jak i te głębiej położone, poprawiając ich dotlenienie, odżywienie oraz mikrocyrkulację. Podczas zabiegu igły tworzą mikrourazy, które są idealnym siedliskiem do syntezy nowego kolagenu i elastyny, fibroblasty migrują do miejsca uszkodzenia.
+                        Efekty:
+                        • redukcja zmarszczek
+                        • anti-aging
+                        • ujędrnienie skóry ciała i twarzy
+                        • redukcję blizn
+                        • redukcja rozstępów
+                        • obkurczanie rozszerzonych porów
+                        • wyrównanie kolorytu skóry
+                        • łysienie
+    
+                        Zabieg wykonujemy w serii 4-6 zabiegów co 1-1,5 miesiąca. Częstotliwość zabiegów i ich ilość może być różna w zależności od problemu.
+                     </div>
+                     <button class="second-button" onclick="toggleDescription(this); toggleBold(this)">
+                        Cena
+                     </button>
+                     <div class="description hidden">
+                        <p><strong>Twarz - </strong>1500,00 zł</p>
+                        <p><strong>Twarz + Szyja - </strong>1700,00 zł</p>
+                        <p><strong>Twarz + Szyja + Dekolt - </strong>2000,00 zł</p>
+                        <p><strong>Twarz (pakiet 4 zabiegów) - </strong>4800,00 zł <span class="promo">PROMOCJA 20% !</span></p>
+                        <p><strong>Twarz + Szyja (pakiet 4 zabiegów) - </strong>5440,00 zł <span class="promo">PROMOCJA 20% !</span></p>
+                        <p><strong>Twarz + Szyja + Dekolt (pakiet 4 zabiegów) - </strong>6400,00 zł <span class="promo">PROMOCJA 20% !</span></p>
+                        <p><strong>Dłonie jako dodatek do zabiegu VIRTUE RF - </strong>400,00 zł</p>
+                        <p><strong>Ciało: redukcja blizn, rozstępów, zagęszczanie skóry. </strong>
+                        Cena ustalana indywidualnie w zależności od rozmiaru problemu - 1000-1800 zł</p>
+                        <p><strong>Ciało (pakiet 4 zabiegów): redukcja blizn, rozstępów, zagęszczanie skóry - </strong>
+                        3200-5760 zł <span class="promo">PROMOCJA 20% !</span> Cena ustalana indywidualnie na podstawie rozmiaru obszaru zabiegowego</p>
+                     </div>
+
+                    
+                    
+
+                    <br><br>
+                    <button class="back-to-first-button hidden" onclick="back()" style="font-size: 30px; padding: 10px; border: none">&#9754;</button>
+                </div>
+            </div>
+
+
+            <div class="service">
+                <button class="first-button" onclick="toggleSecondButtons(this)">
+                    <span>Infuzja tlenowa Intraceuticals
+                    </span>
+                </button>
+                <div class="service-2 hidden">
+                    <p class = "header">Infuzja tlenowa Intraceuticals                    </p>
+                    Intraceuticals to zabieg odmładzania i nawilżania skóry. Skuteczność jego działania zapewnia połączenie technologii hiperbarycznego tlenu z kwasem hialuronowym i składnikami aktywnymi. Jedną z tajemnic skuteczności metody Intraceuticals jest zastosowanie dwóch postaci kwasu hialuronowego:
+                    – niskocząsteczkowego, który penetruje skórę razem z przyłączaną wodą oraz przenika do niej wraz z dołączonymi składnikami aktywnymi. Niskocząsteczkowy kwas hialuronowy spełnia zatem dwie podstawowe funkcje: nawilża i jest nośnikiem związków aktywnych.– wielkocząsteczkowego, którego zadaniem jest wiązać wilgoć z otoczenia oraz utrzymywać w skórze wilgoć zgromadzoną za sprawą niskocząsteczkowego kwasu hialuronowego
+
+                    Jako dodatek w cenie endermolift LPG twarzy
+                    <br><br>
+                    <p><strong>Cena: </strong>600zł</p>
+
+                    <br><br>
+                    <button class="back-to-first-button hidden" onclick="back()" style="font-size: 30px; padding: 10px; border: none">&#9754;</button>
+                </div>
+            </div>
+
+
+            <div class="service">
+                <button class="first-button" onclick="toggleSecondButtons(this)">
+                    <span>GeneO™ </span>
+                </button>
+                <div class="service-2 hidden">
+                    <p class = "header">GeneO™</p>
+                    <button class="second-button" onclick="toggleDescription(this); toggleBold(this)">
+                       Opis
+                    </button>
+                    <div class="description hidden">
+                        Geneo to wyjątkowa platforma marki Pollogen, która umożliwia uzyskanie odmłodzonej, ujędrnionej i naturalnie wyglądającej skóry.
+                        To kompleksowa pielęgnacja, rewitalizacja oraz naturalne dotlenienie skóry od wewnątrz 3 w 1. Podczas zabiegu wykorzystujemy wyjątkowej formuły kapsułki, wzbogacone w składniki odżywcze oraz żele bazowe, umożliwiając tym samym dopasowanie zabiegów do konkretnego rodzaju skóry i konkretnych jej potrzeb. Nad efektem wzmacniającym dba specjalne odżywcze serum.
+                        Geneo Balance:
+                        WSKAZANIE:SKÓRA TŁUSTA
+                        DZIAŁANIE: Oczyszcza pory, zapewnia równowagę dla skóry tłustej, poprawia strukturę skóry, wygładza, nadaje skórze blask.
+                        Geneo Illuminate:
+                        WSKAZANIE: ROZJAŚNIENIE SKÓRY
+                        DZIAŁANIE: Poprawa i wyrównanie kolorytu skóry, rozjaśnienie zmian pigmentacyjnych, wygładzenie struktury skóry, rewitalizacja dająca wyjątkowy efekt odmłodzenia i rozświetlenia
+                        Geneo Revive:
+                        WSKAZANIA: OZNAKI STARZENIA
+                        DZIAŁANIE: Rewitalizacja matowej skóry, redukcja zmarszczek, udoskonalenie struktury skóry, wygładzenie i odmłodzenie
+                        Geneo Hydrate:
+                        WSKAZANIE: SKÓRA SUCHA I MATOWA
+                        DZIAŁANIE: Odżywia i oczyszcza skórę sucha i matową. Nadaje jej zdrowego i naturalnego blasku oraz dogłębnie nawilża.
+                        Geneo Detox:
+                        WSKAZANIE: Wzmocnienie bariery ochronnej skóry
+                        DZIAŁANIE: Chroni skórę przed szkodliwym działaniem środowiska i toksyn. Napina i rozjaśnia, zapewniając efekt równowagi, odświeżenia.
+                        
+                        Geneo Glam: przenosi skórę na wyższy poziom pielęgnacji. Czyste złoto zamknięte w kapsułkach Geneo Glam OxyPod wraz z kompleksem peptydów i aminokwasów z jedwabiu, dodają komórkom energii, zapobiegają utracie kolagenui przywracają elastyczność. Efektem jest gładka, wypielęgnowana i młodzieńcza skóra.Składniki aktywne: -Płatki złota odgrywają królewską rolę – wzmacniają, ujędrniają i przede wszystkim rozświetlają cerę! Co więcej, posiadają właściwości antyoksydacyjnei przeciwzapalne, dzięki czemu skutecznie opóźnimy procesy starzenia i przyśpieszymy procesy regeneracji.
+                        - Aminokwasy jedwabiu łatwo się wchłaniająi wiążą kreatynę ze skórą. Zapobiegają utracie nawilżenia, chronią elastyczność i redukują drobne zmarszczki.
+                        - Karnozyna działa przeciwutleniająco oraz odpowiada za system ochronny przed promieniami UV
+                        Serum równoważące-Kwas hialuronowy reguluje utratę wody przez naskórek, utrzymując prawidłową barierę lipidową.-Olej z maruli skutecznie nawilża, zapewnia silną ochronę przed czynnikami zewnętrznymi tj. promienie UV, mróz, silny wiatr.-Olej z dzikiej róży to źródło witamin A i C, doskonale redukuje przebarwienia, działa przeciwzapalnie i łagodzi oznaki starzenia.-PhytoSpherixTM wspiera proces dostarczenia energii do odżywienia komórek skóry, odbudowy kolagenu oraz skutecznie zwiększa jędrność i poziom nawilżenia
+                    </div>
+
+                    <button class="second-button" onclick="toggleDescription(this); toggleBold(this)">
+                        Cennik
+                    </button>
+                    <div class="description hidden">
+                        <p><strong>REVIVE, HYDRATE, DETOX, ILLUMINATE, BALANCE</strong></p>
+                        <p>Twarz + Szyja - 400 zł</p>
+                        <p>Twarz + Szyja + Dekolt - 450 zł</p>
+                        <p>Twarz + Szyja (pakiet 4 zabiegów) - 1400 zł</p>
+                        <p>Twarz + Szyja + Dekolt (pakiet 4 zabiegów) - 1600 zł</p>
+                        
+                        <p><strong>GeneO GLAM, PROTECT</strong></p>
+                        <p>Twarz + Szyja - 450 zł</p>
+                        <p>Twarz + Szyja + Dekolt - 500 zł</p>
+                        <p>Twarz + Szyja (pakiet 4 zabiegów) - 1600 zł</p>
+                        <p>Twarz + Szyja + Dekolt (pakiet 4 zabiegów) - 1800 zł</p>           
+                    </div>                          
+
+                    <br><br>
+                    <button class="back-to-first-button hidden" onclick="back()" style="font-size: 30px; padding: 10px; border: none">&#9754;</button>
+                </div>
+            </div>
+
+
+            
+            <div class="service">
+                <button class="first-button" onclick="toggleSecondButtons(this)">
+                    <span>Observe- analiza skóry</span>
+                </button>
+                <div class="service-2 hidden">
+                    <p class = "header">Observe- analiza skóry</p>
+                    Intraceuticals to zabieg odmładzania i nawilżania skóry. Skuteczność jego działania zapewnia połączenie technologii hiperbarycznego tlenu z kwasem hialuronowym i składnikami aktywnymi. Jedną z tajemnic skuteczności metody Intraceuticals jest zastosowanie dwóch postaci kwasu hialuronowego:
+                    – niskocząsteczkowego, który penetruje skórę razem z przyłączaną wodą oraz przenika do niej wraz z dołączonymi składnikami aktywnymi. Niskocząsteczkowy kwas hialuronowy spełnia zatem dwie podstawowe funkcje: nawilża i jest nośnikiem związków aktywnych.– wielkocząsteczkowego, którego zadaniem jest wiązać wilgoć z otoczenia oraz utrzymywać w skórze wilgoć zgromadzoną za sprawą niskocząsteczkowego kwasu hialuronowego
+
+                    Jako dodatek w cenie endermolift LPG twarzy
+                    <br><br>
+                    <p><strong>Cena:</strong> 600zł</p>
+
+                    <br><br>
+                    <button class="back-to-first-button hidden" onclick="back()" style="font-size: 30px; padding: 10px; border: none">&#9754;</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

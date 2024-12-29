@@ -1,0 +1,69 @@
+body {
+    font-family: "Times New Roman", Times, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: white;
+}
+
+
+.content-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    color: black;
+    margin-top: 60px;
+}
+
+/* Akapity */
+p {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Lista zespołu */
+ul {
+    font-size: 1rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 0.75rem;
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+ul li strong {
+    color: black;
+}
+
+@media (max-width: 600px) {
+    .content-container {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1rem;
+    }
+}
