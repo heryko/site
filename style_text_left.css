@@ -4,11 +4,11 @@ body {
     padding: 0;
     color: black;
     background-color: white;
-    display: flex;  /* Enable Flexbox */
+    display: flex;  /* Flexbox layout */
     justify-content: center;  /* Center horizontally */
     align-items: center;  /* Center vertically */
     height: 100vh;  /* Ensure the body takes full height of the viewport */
-    flex-direction: column;
+    flex-direction: column;  /* Stack children vertically */
 }
 
 .content-container {
@@ -18,27 +18,33 @@ body {
     width: 70%;  /* Container takes 70% of width */
     object-fit: contain;
     flex-direction: column;
+    display: flex;
+    flex-wrap: wrap; /* Allow content to wrap to the next line */
+    justify-content: center;  /* Ensure vertical centering of content within this container */
+    align-items: center;  /* Center content horizontally within the container */
 }
+
 
 /* Header Styling */
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: black;
     text-align: center;
-    margin-bottom: 20px;
+    width: 100%;  /* Ensure header takes the full width */
 }
 
 /* Section Styling */
 section h2 {
     font-size: 1.75rem;
     color: black;
-    margin-top: 90px;
+    margin-top: 20px;
 }
 
 /* Paragraphs Styling */
 p {
     margin-bottom: 15px;
     text-align: center;
+    width: 100%;  /* Ensure paragraphs take full width */
 }
 
 /* List Styling */
@@ -46,6 +52,7 @@ ul {
     font-size: 1rem;
     list-style-type: none;
     padding: 0;
+    width: 100%;  /* Ensure list takes full width */
 }
 
 ul li {
@@ -53,34 +60,9 @@ ul li {
     text-align: center;
     margin: 10px 0;
     padding: 10px;
-    background-color: white;
-    border-radius: 4px;
 }
 
 ul li strong {
     color: black;
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 600px) {
-    .content-container {
-        margin: 0 5%;
-        padding: 15px;
-        width: 90%;
-    }
-
-    header h1 {
-        font-size: 1.75rem;
-    }
-
-    section h2 {
-        font-size: 1.25rem;
-        margin-top: 30px;
-    }
-
-    ul li {
-        font-size: 0.875rem;
-        margin: 8px 0;
-        padding: 8px;
-    }
-}
