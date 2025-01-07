@@ -53,7 +53,6 @@ body {
     text-transform: uppercase;
     align-items: center; 
     width: 95%; 
-    background-color: white; 
     color: black;
     font-size: 16px; 
     border: 1px none black;
@@ -64,6 +63,7 @@ body {
     transition: background-color 0.3s, padding 0.3s, font-size 0.3s; 
     display: inline-flex;  
     justify-content: center; 
+    background: none;
     
     border-right: 1px solid black;
     border-left: 1px solid black;

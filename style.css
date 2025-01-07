@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow:hidden;
+    overflow:auto;
     cursor: url('cursor.svg'), auto;
 }
 
@@ -26,10 +26,11 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: center; /* Wyrównanie poziome */
 }
 
 .image-container {
-    position: relative;
+    position: block;
     margin-bottom: 20vh;  /* Reduced margin with vh for better responsiveness */
     margin-top: 20vh;     /* Reduced margin with vh for better responsiveness */
 }
@@ -60,7 +61,7 @@ body {
 @media (min-width: 1000px) {
     .image-container .image {
         width: 25%; 
-        margin: 20px 0; 
+        margin: 20px 20px; 
     }
 }
 
@@ -68,16 +69,16 @@ body {
     position: absolute;
     display: flex;
     width: 100%;
-    margin-top: 8vh;
-    margin-bottom: 90vh;
+    top: 0;
+    margin: 5%;
 }
 
 .bottom-buttons {
     position: absolute;
     display: flex;
     width: 100%;
-    margin-top: 90vh;
-    margin-bottom: 8vh;
+    bottom: 0;
+    margin: 5%;
 }
 
 
