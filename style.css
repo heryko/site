@@ -30,9 +30,9 @@ body {
 }
 
 .image-container {
-    position: block;
-    margin-bottom: 20vh;  /* Reduced margin with vh for better responsiveness */
-    margin-top: 20vh;     /* Reduced margin with vh for better responsiveness */
+    position: relative;
+    margin-bottom: 15vh;  /* Reduced margin with vh for better responsiveness */
+    margin-top: 15vh;     /* Reduced margin with vh for better responsiveness */
 }
 
 .image-container .image {
