@@ -4,11 +4,8 @@ body {
     padding: 0;
     color: black;
     background-color: white;
-    display: flex;  /* Flexbox layout */
-    justify-content: center;  /* Center horizontally */
-    align-items: center;  /* Center vertically */
-    height: 100vh;  /* Ensure the body takes full height of the viewport */
-    flex-direction: column;  /* Stack children vertically */
+    cursor: url('cursor.svg'), auto;
+    font-style: normal;
 }
 
 .content-container {

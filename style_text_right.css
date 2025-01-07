@@ -4,13 +4,15 @@ body {
     padding: 0;
     color: black;
     background-color: white;
+    cursor: url('cursor.svg'), auto;
 }
 
 .services-container {
-    width: 80vh; 
+    display: flex; /* Ustawienie kontenera na Flexbox */
     flex-direction: column;
-    
+    width: 80vh; /* Szerokość ustawiona na podstawie wysokości widoku */
 }
+
 
 .services-list {
     height: 50vh; 

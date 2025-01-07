@@ -7,8 +7,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
-    overflow: hidden;
+    overflow:hidden;
+    cursor: url('cursor.svg'), auto;
 }
 
 :root {
@@ -38,7 +38,7 @@ body {
 .image-container .image {
     height: auto;
     object-fit: contain;
-    margin: 10px 0;
+    margin: 10px 10px;
     transition: transform 1.5s ease-in-out; 
 }
 
@@ -54,6 +54,10 @@ body {
     transform: translateX(0); 
 }
 
+.custom-arrow {
+    cursor: url('cursor.svg'), auto;
+}
+
 @media (min-width: 1000px) {
     .image-container .image {
         width: 25%; 
@@ -61,14 +65,20 @@ body {
     }
 }
 
-.top-buttons, .bottom-buttons {
+.top-buttons {
     display: flex;
-    justify-content: space-around;
     width: 100%;
-    margin-top: 2vh;  /* Adjusted to vh for better responsiveness */
-    margin-bottom: 2vh;  /* Adjusted to vh for better responsiveness */
-    
+    margin-top: 8vh;
+    margin-bottom: 4vh;
 }
+
+.bottom-buttons {
+    display: flex;
+    width: 100%;
+    margin-top: 4vh;
+    margin-bottom: 8vh;
+}
+
 
 @media (max-width: 600px) {
     .top-buttons, .bottom-buttons {
@@ -88,9 +98,12 @@ body {
     background-color: #fff;
     color: black;
     text-align: center;
-    cursor: pointer;
     transition: transform 0.3s ease, font-weight 0.3s;
+    cursor: url('cursor.svg'), auto;
+
+    font-family: inherit;
 }
+
 
 .button:hover {
     transform: scale(1.1); /* Slight hover scale */
