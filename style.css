@@ -187,18 +187,18 @@ body.loaded .logo-animation {
 
     .image-container {
         position: relative;
-        margin-top: 1vh;
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
     }
 
     .image-container .image {
         transform: translateX(0); 
-        height: auto;
+        height: 80vh; 
         object-fit: contain; 
         transition: transform 1.5s ease-in-out; 
-        margin-top: 1vh;
         width: 90%;
-        max-width: 90%;  
-        max-height: 90vh;  
+        max-width: 90%;   
     }
 
 }
@@ -227,7 +227,7 @@ header {
 }
 
 .menu-button {
-    background-color: rgba(211, 211, 211, 1); 
+    background-color: rgba(211, 211, 211, 0.5); 
     color: black; 
     border: none; 
     display: block; 
