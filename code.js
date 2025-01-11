@@ -11,7 +11,9 @@ function handleMove(direction) {
     imageContainer.classList.remove('move-left', 'move-right');
     imageContainer.classList.add(`move-${direction}`);
 
+
     toggleActiveButton(document.getElementById(`move-${direction}`));
+
 }
 
 function resetImagePosition() {
@@ -24,34 +26,6 @@ function clearActiveButtons() {
     const buttons = document.querySelectorAll('.top-buttons .button');
     buttons.forEach(button => button.classList.remove('active', 'inactive'));
 }
-
-function checkScreenSize() {
-    const showMoreButton = document.getElementById('show-more');
-    const topButtons = document.querySelector('.top-buttons');
-    const bottomButtons = document.querySelector('.bottom-buttons');
-
-    if (window.innerWidth < 768) {
-        topButtons.style.display = 'none';
-        bottomButtons.style.display = 'none';
-        showMoreButton.style.display = 'block';
-    } else {
-        topButtons.style.display = 'flex';
-        bottomButtons.style.display = 'flex';
-        showMoreButton.style.display = 'none';
-        document.getElementById('more-options').style.display = 'none';
-    }
-}
-
-window.addEventListener('load', () => {
-    checkScreenSize();
-    document.body.classList.add('loaded'); 
-});
-window.addEventListener('resize', checkScreenSize);
-
-document.getElementById('show-more').addEventListener('click', () => {
-    const moreOptions = document.getElementById('more-options');
-    moreOptions.style.display = moreOptions.style.display === 'none' ? 'block' : 'none';
-});
 
 
 function showTextContainer(direction) {
@@ -188,3 +162,13 @@ function back() {
         service.style.display = 'flex'; 
     });
 }
+
+document.getElementById('menu-toggle').addEventListener('click', () => {
+    const menu = document.getElementById('mobile-menu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+});
+
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded'); // Dodanie klasy 'loaded' po załadowaniu strony
+});
+

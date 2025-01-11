@@ -8,9 +8,9 @@ body {
 }
 
 .services-container {
-    display: flex; /* Ustawienie kontenera na Flexbox */
+    display: flex; 
     flex-direction: column;
-    width: 80vh; /* Szerokość ustawiona na podstawie wysokości widoku */
+    width: 80vh;
 }
 
 
@@ -125,5 +125,3 @@ body {
     margin: 15px !important; /* Wymusza odstępy */
     padding: 10px !important;/* Dopasowanie przestrzeni wewnętrznej */
 }
-
-/* Wymusza odstępy */
