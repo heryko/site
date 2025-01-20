@@ -26,10 +26,12 @@ body {
     }
 
     .content-container {
-        width: 60%; /* Zmniejszenie szerokości na mniejszych ekranach */
+        width: 70%; /* Zmniejszenie szerokości na mniejszych ekranach */
         max-width: 90%; /* Dopasowanie do mniejszych ekranów */
         text-align: center;
         margin: auto; 
+        overflow-y: auto; 
+        overflow-x: auto;
         
     }
 

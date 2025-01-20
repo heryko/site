@@ -129,16 +129,51 @@ body {
 
 @media (max-width: 1300px), (max-height: 700px) {
 
-    .services-container{
+    .services-container {
         justify-content: center; /* Wyśrodkuj zawartość pionowo */
         color: black;
         background-color: white;
-        text-align: center
+        text-align: center;
     }
 
     .services-list {
-        height: 100vh; 
+        height: auto; /* Umożliwia elastyczną wysokość */
         overflow-y: auto; 
         overflow-x: hidden;
+        display: flex;
+        flex-direction: column; /* Ustawienie elementów w kolumnie */
+        flex-wrap: wrap; /* Umożliwia zawijanie przycisków */
+        align-items: center; /* Wyrównanie przycisków do środka */
+    }
+
+    .service {
+        width: 90%; /* Ustawiłem szerokość przycisków */
+        max-width: 300px; /* Ograniczenie szerokości przycisków */
+        margin-bottom: 10px; /* Odstęp między przyciskami */
+    }
+
+    .service button {
+        width: 100%; /* Przyciski będą miały szerokość 100% dostępnej przestrzeni */
+        font-size: 14px; /* Mniejsza czcionka na małych ekranach */
+        padding: 5px;
+    }
+
+    .service-2 .second-button {
+        width: 90%; /* Przyciski będą miały szerokość 90% */
+        max-width: 300px; /* Ograniczenie szerokości przycisków */
+        margin-bottom: 10px; /* Odstęp między przyciskami */
+        font-size: 14px; /* Mniejsza czcionka */
+    }
+
+    .service-2 .description {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .service-2 .back-to-first-button {
+        margin-top: 15px;
+        padding: 10px;
+        font-size: 30px;
+        border: none;
     }
 }
