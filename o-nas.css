@@ -20,31 +20,33 @@ body {
 @media (max-width: 1300px), (max-height: 700px) {
     body {
         text-align: center;
+        display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;  /* Zamiast center, żeby nie blokować przewijania */
         align-items: center;
+        height: 100%; /* Zapewnia, że body wypełnia całą wysokość ekranu */
+        overflow: hidden; /* Blokuje przewijanie na body, ale inne elementy mogą przewijać */
     }
 
     .content-container {
-        width: 70%; /* Zmniejszenie szerokości na mniejszych ekranach */
-        max-width: 90%; /* Dopasowanie do mniejszych ekranów */
+        width: 70%;
+        max-width: 90%;
         text-align: center;
-        margin: auto; 
-        overflow-y: auto; 
-        overflow-x: auto;
-        
+        margin: auto;
+        overflow-y: auto; /* Teraz przewijanie w pionie będzie możliwe */
+        overflow-x: hidden; /* Jeśli chcesz zablokować przewijanie w poziomie */
     }
 
     header h1 {
-        font-size: 2rem; /* Mniejszy nagłówek */
+        font-size: 2rem;
     }
 
     section h2 {
-        font-size: 1.5rem; /* Mniejszy tekst sekcji */
+        font-size: 1.5rem;
     }
 
     p {
-        font-size: 1rem; /* Mniejszy tekst paragrafów */
+        font-size: 1rem;
         line-height: 1.5;
     }
 }

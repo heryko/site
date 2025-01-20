@@ -128,41 +128,44 @@ body {
 
 
 @media (max-width: 1300px), (max-height: 700px) {
+    body {
+        overflow-x: hidden; /* Zablokowanie przewijania w poziomie na całej stronie */
+    }
 
     .services-container {
-        justify-content: center; /* Wyśrodkuj zawartość pionowo */
+        justify-content: center;
         color: black;
         background-color: white;
         text-align: center;
     }
 
     .services-list {
-        height: auto; /* Umożliwia elastyczną wysokość */
-        overflow-y: auto; 
-        overflow-x: hidden;
+        height: auto;
+        overflow-y: auto;
+        overflow-x: hidden; /* Zablokowanie przewijania w poziomie dla .services-list */
         display: flex;
-        flex-direction: column; /* Ustawienie elementów w kolumnie */
-        flex-wrap: wrap; /* Umożliwia zawijanie przycisków */
-        align-items: center; /* Wyrównanie przycisków do środka */
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
     }
 
     .service {
-        width: 90%; /* Ustawiłem szerokość przycisków */
-        max-width: 300px; /* Ograniczenie szerokości przycisków */
-        margin-bottom: 10px; /* Odstęp między przyciskami */
+        width: 90%;
+        max-width: 300px;
+        margin-bottom: 10px;
     }
 
     .service button {
-        width: 100%; /* Przyciski będą miały szerokość 100% dostępnej przestrzeni */
-        font-size: 14px; /* Mniejsza czcionka na małych ekranach */
+        width: 100%;
+        font-size: 14px;
         padding: 5px;
     }
 
     .service-2 .second-button {
-        width: 90%; /* Przyciski będą miały szerokość 90% */
-        max-width: 300px; /* Ograniczenie szerokości przycisków */
-        margin-bottom: 10px; /* Odstęp między przyciskami */
-        font-size: 14px; /* Mniejsza czcionka */
+        width: 90%;
+        max-width: 300px;
+        margin-bottom: 10px;
+        font-size: 14px;
     }
 
     .service-2 .description {
