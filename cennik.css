@@ -1,7 +1,14 @@
-body {
-    font-family: "Times New Roman", Times, sans-serif;
+/* Globalne ustawienia na poziomie dokumentu */
+html, body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Blokowanie przewijania w poziomie na całej stronie */
+    width: 100%;
+}
+
+/* Pozostałe style pozostają bez zmian */
+body {
+    font-family: "Times New Roman", Times, sans-serif;
     color: black;
     background-color: white;
     cursor: url('cursor.svg'), auto;
@@ -13,18 +20,17 @@ body {
     width: 80vh;
 }
 
-
 .services-list {
     height: 50vh; 
     overflow-y: auto; 
     overflow-x: hidden;
 }
 
+/* Stylizacja pasków przewijania */
 .services-list::-webkit-scrollbar {
     width: 6px; 
     margin: 30px;
 }
-
 
 .services-list::-webkit-scrollbar-thumb {
     background-color: black; 
@@ -41,8 +47,7 @@ body {
     border-radius: 10px; 
 }
 
-
-/* Stylizacja usługi */
+/* Stylizacja przycisków i usług */
 .service {
     background-color: white;
     padding: 10px;
@@ -90,7 +95,6 @@ body {
 
 .service button:hover {
     font-weight: bold;
-    
 }
 
 .service {
@@ -102,7 +106,6 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
 
 .bold {
     font-weight: bold;
@@ -119,17 +122,17 @@ body {
     font-weight: bold; 
     text-align: center; 
     color: black;
-
 }
+
 .second-button {
-    margin: 15px !important; /* Wymusza odstępy */
-    padding: 10px !important;/* Dopasowanie przestrzeni wewnętrznej */
+    margin: 15px !important; 
+    padding: 10px !important; 
 }
 
-
+/* Stylizacja dla urządzeń o szerokości ekranu mniejszej niż 1300px lub wysokości mniejszej niż 700px */
 @media (max-width: 1300px), (max-height: 700px) {
     body {
-        overflow-x: hidden; /* Zablokowanie przewijania w poziomie na całej stronie */
+        overflow-x: hidden; /* Zablokowanie przewijania w poziomie */
     }
 
     .services-container {
@@ -142,7 +145,7 @@ body {
     .services-list {
         height: auto;
         overflow-y: auto;
-        overflow-x: hidden; /* Zablokowanie przewijania w poziomie dla .services-list */
+        overflow-x: hidden;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
