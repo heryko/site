@@ -131,9 +131,14 @@ body {
 
     .services-container{
         justify-content: center; /* Wyśrodkuj zawartość pionowo */
-        min-height: 100vh; 
         color: black;
         background-color: white;
         text-align: center
+    }
+
+    .services-list {
+        height: 100vh; 
+        overflow-y: auto; 
+        overflow-x: hidden;
     }
 }

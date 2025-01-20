@@ -1,13 +1,15 @@
 body {
     margin: 0;
+    padding: 0;
     font-family: "Times New Roman", Times, sans-serif;
-    color: #000;
+    color: black;
+    background-color: white;
+    cursor: url('cursor.svg'), auto;
+    font-style: normal;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    overflow:auto;
-    cursor: url('cursor.svg'), auto;
 }
 
 :root {
@@ -123,7 +125,7 @@ body.loaded .logo-animation {
     position: fixed; 
     text-align: center;
     transition: opacity 1s; 
-    top: 20%;
+    top: 25%;
     
 }
 
@@ -240,6 +242,8 @@ header {
     cursor: url('cursor.svg'), auto;   
     text-align: center; 
     transition: background-color 0.3s ease; 
+    position: relative; /* Add relative positioning for z-index to take effect */
+    z-index: 1010; /* Higher than the mobile menu's z-index */
 }
 
 .menu-button:hover {
@@ -256,15 +260,11 @@ header {
     justify-content: center; 
     align-items: center;     
     position: fixed;        
-    top: 50%;               
-    left: 50%;              
-    transform: translate(-50%, -50%); 
-    width: 50%;              
-    z-index: 1000;           /* Zapewnienie, że element jest na wierzchu */
-    padding: 20px;           /* Odstępy wewnętrzne */
+    width: 100%;              
+    z-index: 1000; /* Ensure it stays below .menu-button */      
 }
 
-#mobile-menu button {           
+#mobile-menu button {      
     margin: 0 auto;
     padding: 2vh;       
     font-size: 18px;          
@@ -274,14 +274,14 @@ header {
     text-align: center;       
     transition: transform 0.3s ease, font-weight 0.3s;
     cursor: url('cursor.svg'), auto;
-    font-family: inherit;
     text-decoration: none;   
     display: block;         
     width: 50%;            
+    position: relative; /* Ensure these elements respect stacking context */
+    z-index: 990; /* Ensure these are below the #mobile-menu itself */
 }
 
 #mobile-menu button:hover {
     opacity: 0.8;  
 }
-
 
