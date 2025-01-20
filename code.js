@@ -1,3 +1,6 @@
+resetImagePosition(); 
+checkWindowSize();
+
 document.getElementById('move-right').addEventListener('click', () => {
     handleMove('right');
 });
@@ -14,6 +17,14 @@ function handleMove(direction) {
 
     toggleActiveButton(document.getElementById(`move-${direction}`));
 
+}
+
+window.addEventListener('resize', checkWindowSize);
+
+function checkWindowSize() {
+    if (window.innerWidth <= 1300 || window.innerHeight <= 700) {
+        resetImagePosition(); 
+    }
 }
 
 function resetImagePosition() {
@@ -163,12 +174,50 @@ function back() {
     });
 }
 
-document.getElementById('menu-toggle').addEventListener('click', () => {
-    const menu = document.getElementById('mobile-menu');
-    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
 });
 
-window.addEventListener('load', () => {
-    document.body.classList.add('loaded'); // Dodanie klasy 'loaded' po załadowaniu strony
+///PHONE
+
+
+document.getElementById('menu-toggle').addEventListener('click', () => {
+    const menu = document.getElementById('mobile-menu');
+    const imageContainer = document.getElementById('image-container');
+    const textContainerPhone = document.getElementById('text-container-phone');
+
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+
+    if(textContainerPhone.style.display === 'block'){
+        textContainerPhone.style.display = 'none';
+        imageContainer.style.display = 'block';
+    }
 });
+
+
+function loadHtmlContentPhone(fileName) {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const textContainerPhone = document.getElementById('text-container-phone');
+    const imageContainer = document.querySelector('.image-container');
+
+    // Hide menu and image container, show text container
+    if (mobileMenu) mobileMenu.style.display = 'none';
+    if (imageContainer) imageContainer.style.display = 'none';
+    textContainerPhone.style.display = 'block';
+
+    fetch(fileName)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.text();
+        })
+        .then(data => {
+            textContainerPhone.innerHTML = data; // Insert the fetched HTML
+        })
+        .catch(error => {
+            textContainerPhone.innerHTML = '<p>Sorry, something went wrong. Unable to load the content.</p>';
+            console.error('Error loading HTML:', error);
+        });
+}
 

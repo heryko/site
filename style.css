@@ -15,9 +15,12 @@ body {
 }
 
 .image-container {
+    display: flex;
     position: relative;
     margin-bottom: 8vh;  
-    margin-top: 8vh;     
+    margin-top: 8vh;    
+    justify-content: center;  /* Wyrównanie poziome */
+    align-items: center;      /* Wyrównanie pionowe */ 
 }
 
 .image-container .image {
@@ -70,7 +73,7 @@ body {
     padding: 0;
 }
 
-.button {
+.button{
     margin: 0;
     padding: 0; 
     font-size: large;
@@ -194,7 +197,7 @@ body.loaded .logo-animation {
 
     .image-container .image {
         transform: translateX(0); 
-        height: 80vh; 
+        height: 70vh; 
         object-fit: contain; 
         transition: transform 1.5s ease-in-out; 
         width: 90%;
@@ -217,7 +220,7 @@ body.loaded .logo-animation {
         margin: 20px 20px; 
     }
 
-    .header {
+    .header-phone {
         display: none !important;
     }
 }
@@ -234,7 +237,7 @@ header {
     width: 100%; 
     font-size: 3rem; 
     padding: 10px 0; 
-    cursor: pointer; 
+    cursor: url('cursor.svg'), auto;   
     text-align: center; 
     transition: background-color 0.3s ease; 
 }
@@ -246,4 +249,39 @@ header {
 .menu-button:focus {
     outline: none; 
 }
+
+#mobile-menu {
+    display: flex; 
+    flex-direction: column;  
+    justify-content: center; 
+    align-items: center;     
+    position: fixed;        
+    top: 50%;               
+    left: 50%;              
+    transform: translate(-50%, -50%); 
+    width: 50%;              
+    z-index: 1000;           /* Zapewnienie, że element jest na wierzchu */
+    padding: 20px;           /* Odstępy wewnętrzne */
+}
+
+#mobile-menu button {           
+    margin: 0 auto;
+    padding: 2vh;       
+    font-size: 18px;          
+    color: black;            
+    background-color: white;   
+    border: none;            
+    text-align: center;       
+    transition: transform 0.3s ease, font-weight 0.3s;
+    cursor: url('cursor.svg'), auto;
+    font-family: inherit;
+    text-decoration: none;   
+    display: block;         
+    width: 50%;            
+}
+
+#mobile-menu button:hover {
+    opacity: 0.8;  
+}
+
 
