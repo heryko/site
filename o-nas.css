@@ -67,6 +67,7 @@ ul li strong {
     body {
         margin: 0;  /* Remove default body margin */
         padding: 0;  /* Remove default body padding */
+        overflow-y: auto; /* Enable vertical scrolling if content overflows */
     }
 
     .content-container {

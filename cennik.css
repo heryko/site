@@ -129,6 +129,9 @@ body {
 
 @media (max-width: 1300px), (max-height: 700px) {
 
+    .body   {
+        overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    }
     .services-list {
         height: 100vh; /* Zajmuje całą wysokość ekranu */
         width: 100%; /* Zajmuje całą szerokość ekranu */
