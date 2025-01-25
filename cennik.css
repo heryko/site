@@ -148,5 +148,7 @@ body {
         flex-direction: column;
         width: 100%;
     }
-    
+    *:focus {
+        outline: none; /* Usuwa obramowanie z elementów, które zostały kliknięte/fokusowane */
+    }
 }

@@ -80,4 +80,7 @@ ul li strong {
         text-align: center;
         width: 100%;  /* Make sure text takes full width */
     }
+    *:focus {
+        outline: none; /* Usuwa obramowanie z elementów, które zostały kliknięte/fokusowane */
+    }
 }

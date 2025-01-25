@@ -205,6 +205,11 @@ body.loaded .logo-animation {
 }
 
 @media (min-width: 1300px) and (min-height: 700px) {
+
+    *:focus {
+        outline: none; /* Usuwa obramowanie z elementów, które zostały kliknięte/fokusowane */
+    }
+    
     .top-buttons, .bottom-buttons {
         display: block; 
     }
