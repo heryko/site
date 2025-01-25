@@ -8,6 +8,7 @@ body {
     flex-direction: column;
     overflow:auto;
     cursor: url('cursor.svg'), auto;
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
 }
 
 :root {
@@ -256,11 +257,11 @@ header {
 }
 
 #mobile-menu {
-    display: flex; 
+    display: block; 
     flex-direction: column;  
     justify-content: center; 
     align-items: center;     
-    position: fixed;        
+    position: relative;        
     width: 100%;              
     z-index: 1000; /* Ensure it stays below .menu-button */      
 }
@@ -282,16 +283,7 @@ header {
     z-index: 990; /* Przykłada priorytet względem innych elementów */
 }
 
-
-@keyframes moveImage {
-    0% {
-        transform: translateY(0); /* Początkowa pozycja */
-    }
-    100% {
-        transform: translateY(175px); /* Przesunięcie obrazu w górę (lub w dół, zmień wartość) */
-    }
-}
-
 .image-container.menu-open {
-    animation: moveImage 0.5s ease-out forwards; /* Animacja przesunięcia */
+    margin-bottom: 0;  
+    margin-top: 0;   
 }

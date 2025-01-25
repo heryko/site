@@ -5,6 +5,7 @@ body {
     color: black;
     background-color: white;
     cursor: url('cursor.svg'), auto;
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
 }
 
 .services-container {

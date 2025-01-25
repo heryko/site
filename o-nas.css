@@ -6,6 +6,7 @@ body {
     background-color: white;
     cursor: url('cursor.svg'), auto;
     font-style: normal;
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
 }
 
 .content-container {
