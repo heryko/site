@@ -1,14 +1,7 @@
-/* Globalne ustawienia na poziomie dokumentu */
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Blokowanie przewijania w poziomie na całej stronie */
-    width: 100%;
-}
-
-/* Pozostałe style pozostają bez zmian */
 body {
     font-family: "Times New Roman", Times, sans-serif;
+    margin: 0;
+    padding: 0;
     color: black;
     background-color: white;
     cursor: url('cursor.svg'), auto;
@@ -20,17 +13,18 @@ body {
     width: 80vh;
 }
 
+
 .services-list {
     height: 50vh; 
     overflow-y: auto; 
     overflow-x: hidden;
 }
 
-/* Stylizacja pasków przewijania */
 .services-list::-webkit-scrollbar {
     width: 6px; 
     margin: 30px;
 }
+
 
 .services-list::-webkit-scrollbar-thumb {
     background-color: black; 
@@ -47,7 +41,8 @@ body {
     border-radius: 10px; 
 }
 
-/* Stylizacja przycisków i usług */
+
+/* Stylizacja usługi */
 .service {
     background-color: white;
     padding: 10px;
@@ -95,6 +90,7 @@ body {
 
 .service button:hover {
     font-weight: bold;
+    
 }
 
 .service {
@@ -106,6 +102,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 
 .bold {
     font-weight: bold;
@@ -122,64 +119,21 @@ body {
     font-weight: bold; 
     text-align: center; 
     color: black;
-}
 
+}
 .second-button {
-    margin: 15px !important; 
-    padding: 10px !important; 
+    margin: 15px !important; /* Wymusza odstępy */
+    padding: 10px !important;/* Dopasowanie przestrzeni wewnętrznej */
 }
 
-/* Stylizacja dla urządzeń o szerokości ekranu mniejszej niż 1300px lub wysokości mniejszej niż 700px */
-@media (max-width: 1300px), (max-height: 700px) {
-    body {
-        overflow-x: hidden; /* Zablokowanie przewijania w poziomie */
-    }
 
-    .services-container {
-        justify-content: center;
+@media (max-width: 1300px), (max-height: 700px) {
+
+    .services-container{
+        justify-content: center; /* Wyśrodkuj zawartość pionowo */
+        min-height: 100vh; 
         color: black;
         background-color: white;
-        text-align: center;
-    }
-
-    .services-list {
-        height: auto;
-        overflow-y: auto;
-        overflow-x: hidden;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    .service {
-        width: 90%;
-        max-width: 300px;
-        margin-bottom: 10px;
-    }
-
-    .service button {
-        width: 100%;
-        font-size: 14px;
-        padding: 5px;
-    }
-
-    .service-2 .second-button {
-        width: 90%;
-        max-width: 300px;
-        margin-bottom: 10px;
-        font-size: 14px;
-    }
-
-    .service-2 .description {
-        padding: 10px;
-        margin-top: 10px;
-    }
-
-    .service-2 .back-to-first-button {
-        margin-top: 15px;
-        padding: 10px;
-        font-size: 30px;
-        border: none;
+        text-align: center
     }
 }

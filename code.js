@@ -23,13 +23,35 @@ window.addEventListener('resize', checkWindowSize);
 
 function checkWindowSize() {
     if (window.innerWidth <= 1300 || window.innerHeight <= 700) {
-        resetImagePosition(); 
+        resetImagePosition();
+    } else {
+        resetImagePosition();  
+        showTopButtons();  
+        showImageContainer();
+        hidePhoneTextContainer();
+    }
+}
+function showTopButtons() {
+    const topButtons = document.querySelector('.top-buttons');
+    topButtons.style.display = 'block';  
+}
+
+function showImageContainer() {
+    const imageContainer = document.getElementById('image-container');
+    imageContainer.style.display = 'flex';  
+}
+
+function hidePhoneTextContainer(){
+    const textContainerPhone = document.getElementById('text-container-phone');
+    if (textContainerPhone) {
+        textContainerPhone.style.display = 'none'; 
     }
 }
 
 function resetImagePosition() {
     const imageContainer = document.getElementById('image-container');
     imageContainer.classList.remove('move-right', 'move-left');
+    imageContainer.classList.remove('menu-open');
     hideTextContainer();
 }
 
@@ -41,27 +63,30 @@ function clearActiveButtons() {
 
 function showTextContainer(direction) {
     const textContainer = document.getElementById('text-container');
-    textContainer.classList.remove('left', 'right', 'hide');
-    textContainer.classList.add(direction);
-    textContainer.classList.add('show');
-    textContainer.style.display = 'block';
+
+    textContainer.classList.remove('left', 'right', 'show', 'hide');
+
+    void textContainer.offsetWidth; 
+
+    // Dodaj odpowiednie klasy
+    textContainer.classList.add(direction); 
+    textContainer.classList.add('show'); 
 }
 
 function hideTextContainer() {
     const textContainer = document.getElementById('text-container');
+
     textContainer.classList.remove('show');
+
     textContainer.classList.add('hide');
+
     textContainer.addEventListener('animationend', function handler() {
-        textContainer.style.display = 'none';
-        textContainer.classList.remove('hide');
-        textContainer.removeEventListener('animationend', handler);
-    });
+        textContainer.classList.remove('hide'); 
+        textContainer.removeEventListener('animationend', handler); 
+    }, { once: true }); 
 }
 
 function loadText(fileName, direction) {
-    const textContainer = document.getElementById('text-container');
-    textContainer.style.display = 'none';
-
     fetch(fileName)
         .then(response => {
             if (!response.ok) {
@@ -70,20 +95,18 @@ function loadText(fileName, direction) {
             return response.text();
         })
         .then(htmlContent => {
-            setTimeout(() => {
-                const dynamicText = document.getElementById('dynamic-text');
-                dynamicText.innerHTML = htmlContent;
-                showTextContainer(direction);
-            }, 1000);
+            const dynamicText = document.getElementById('dynamic-text');
+            dynamicText.innerHTML = htmlContent; 
+            showTextContainer(direction); 
         })
         .catch(error => {
             console.error('Error fetching HTML:', error);
             const dynamicText = document.getElementById('dynamic-text');
-            dynamicText.textContent = 'Error loading HTML.';
-            textContainer.style.display = 'block';
-            showTextContainer(direction);
+            dynamicText.textContent = 'Error loading HTML.'; 
+            showTextContainer(direction); 
         });
 }
+
 
 function toggleActiveButton(button) {
     const buttons = document.querySelectorAll('.top-buttons .button');
@@ -186,13 +209,22 @@ document.getElementById('menu-toggle').addEventListener('click', () => {
     const imageContainer = document.getElementById('image-container');
     const textContainerPhone = document.getElementById('text-container-phone');
 
-    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    // Przełączanie widoczności menu
+    if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'flex';  // Pokazuje menu
+        imageContainer.classList.add('menu-open');  // Dodaje klasę do przesunięcia kontenera
+    } else {
+        menu.style.display = 'none';  // Ukrywa menu
+        imageContainer.classList.remove('menu-open');  // Usuwa klasę przesunięcia
+    }
 
-    if(textContainerPhone.style.display === 'block'){
+    // Ukrywanie textContainerPhone jeśli jest widoczny
+    if (textContainerPhone.style.display === 'block') {
         textContainerPhone.style.display = 'none';
-        imageContainer.style.display = 'block';
+        imageContainer.style.display = 'block';  // Przywrócenie widoczności kontenera obrazka
     }
 });
+
 
 
 function loadHtmlContentPhone(fileName) {
@@ -220,4 +252,3 @@ function loadHtmlContentPhone(fileName) {
             console.error('Error loading HTML:', error);
         });
 }
-
