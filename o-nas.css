@@ -65,58 +65,18 @@ ul li strong {
 /* PHONE */
 @media (max-width: 1300px), (max-height: 700px) {
     body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column; 
-        justify-content: center;
-        align-items: center;
-        color: black; 
-        min-height: 100vh;
+        margin: 0;  /* Remove default body margin */
+        padding: 0;  /* Remove default body padding */
     }
 
-    .menu-button {
-        position: absolute; 
-        top: 0; 
-        left: 0; 
-        z-index: 10; 
-    }
     .content-container {
-        width: 90%; 
-        text-align: center;
-        margin: auto;
+        margin: 5% 5%;  /* Reduce margin on smaller screens */
+        width: 90%;  /* Full width on mobile */
+        max-width: 100%;  /* Prevent it from overflowing on smaller screens */
     }
 
-    header h1 {
+    p, ul li, section h2, header h1 {
         text-align: center;
-        font-size: 24px; 
-        margin-bottom: 15px;
-    }
-
-    section h2 {
-        font-size: 20px;
-        margin: 15px 0; 
-        text-align: center;
-    }
-
-    ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 10px 0; 
-        text-align: center;
-    }
-
-    ul li {
-        margin: 10px 0;
-        padding: 8px; 
-        font-size: 1rem; 
-       
-    }
-
-    p {
-        margin-bottom: 10px;
-        line-height: 1.4; 
-        text-align: center;
+        width: 100%;  /* Make sure text takes full width */
     }
 }

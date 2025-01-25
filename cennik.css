@@ -129,11 +129,21 @@ body {
 
 @media (max-width: 1300px), (max-height: 700px) {
 
-    .services-container{
-        justify-content: center; /* Wyśrodkuj zawartość pionowo */
-        min-height: 100vh; 
-        color: black;
-        background-color: white;
-        text-align: center
+    .services-list {
+        height: 100vh; /* Zajmuje całą wysokość ekranu */
+        width: 100%; /* Zajmuje całą szerokość ekranu */
     }
+
+    /* Zmiana rozmiaru przycisków dla lepszej responsywności */
+    .service button {
+        font-size: 12px;
+        padding: 15px;
+    }
+
+    .services-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
 }
