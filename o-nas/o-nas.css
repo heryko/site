@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box; 
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: white;
+    cursor: url('../images/cursor.svg'), auto;
+    overflow: auto;
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+.introduction p {
+    line-height: 1.6;
+    text-align: center;
+}
+
+.team h2 {
+    text-align: center;
+}
+
+.team ul {
+    padding-left: 0; 
+    list-style: none;
+    margin: 0;
+}
+
+.team ul li strong {
+    color: black; 
+}
+
+#main-container {
+    text-align: center;
+    max-width: 800px;
+}
+
+
+
+@media (max-width: 1300px), (max-height: 700px) {
+
+    *:focus {
+        outline: none; /* Usuwa obramowanie z elementów, które zostały kliknięte/fokusowane */
+    }
+    #main-container {
+        margin-top: 40vh;
+        width: 90%; /* Ustawiamy szerokość na 95% na mniejszych ekranach */
+    }
+}
+    
+    
+

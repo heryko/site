@@ -1,0 +1,74 @@
+/* Resetowanie domyślnych marginesów i paddingów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('../images/cursor.svg'), auto;
+}
+
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+/* Pudełko z informacjami */
+.info-box {
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Tytuł */
+.info-box h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color:black;
+}
+
+/* Tekst ogólny */
+.info-box p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.info-box a {
+    color: black;
+    text-decoration: none;
+}
+
+.info-box a:hover {
+    text-decoration: underline;
+}
+
+/* Lista godzin otwarcia */
+.info-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-box ul li {
+    font-size: 16px;
+    color: black;
+}
+
+/* Styl dla mapy */
+.map-container {
+    margin-top: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+@media (max-width: 1300px), (max-height: 700px) {
+
+    *:focus {
+        outline: none; /* Usuwa obramowanie z elementów, które zostały kliknięte/fokusowane */
+    }
+    #main-container {
+        width: 90%; /* Ustawiamy szerokość na 95% na mniejszych ekranach */
+    }
+}
+    

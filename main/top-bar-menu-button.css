@@ -1,0 +1,130 @@
+/* Ogólne ustawienia dla body */
+* {
+    box-sizing: border-box; /* Upewnia się, że padding i border są wliczane w szerokość i wysokość */
+    font-family: "Georgia", Times, serif;
+}
+
+.content-container {
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px; 
+    font-size: 0.8rem; 
+}
+
+.top-bar {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10vh; 
+    background-color: white; 
+    z-index: 10; 
+}
+
+.center-text{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu-button {
+    position: absolute;
+    left: 30px; 
+    padding: 30px;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: font-size 0.3s;
+}
+
+.menu-button:hover {
+    font-size: 20px;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: fit-content;
+}
+
+.button {
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    border: none;
+    background: none;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+}
+
+.button:hover {
+    font-size: 20px;
+}
+/* Początkowa pozycja elementu poza ekranem */
+.left-text {
+    position: absolute;
+    top: 50%;
+    left: -200px; /* Element zaczyna poza ekranem */
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: black;
+    transition: left 1s ease; /* Animacja przesunięcia */
+}
+
+/* Po załadowaniu strony element przesuwa się na swoją normalną pozycję */
+.left-text.visible {
+    left: 150px; /* Element przesuwa się na 150px od lewej */
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 1300px), (max-height: 700px) {
+    .left-text {
+        display: none;
+    }
+
+    .menu-button {
+        font-size: 24px; /* Zwiększ rozmiar */
+        padding: 10px;
+        border: none; /* Usunięcie obramowania */
+        background: none; /* Bez tła */
+        text-align: center;
+    }
+
+    .menu-button {
+        font-size: 24px; /* Zwiększenie rozmiaru */
+        display: inline-block;
+    }
+
+
+    .center-text{
+        font-size: 16px;
+    }
+    
+}
+
+@media (min-width: 1300px), (min-height: 700px) {
+    .menu-button {
+        font-size: 24px; /* Zwiększenie rozmiaru */
+        display: inline-block;
+    }
+}

@@ -1,0 +1,224 @@
+body {
+    margin: 0;
+    font-family: "Georgia", Times, serif;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow:auto;
+    cursor: url('../images/cursor.svg'), auto;
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Wyrównanie poziome */
+    align-items: center;     /* Wyrównanie pionowe */
+    position: relative;
+    margin-bottom: 8vh;
+    margin-top: 8vh;
+}
+
+.image-container .image {
+    border: black;
+    width: 100%;  /* Użyj pełnej szerokości dostępnej przestrzeni */
+    height: auto; /* Zachowanie proporcji */
+    object-fit: contain; /* Zachowanie proporcji obrazu */
+    margin: 10px 10px;
+    transition: transform 1.5s ease-in-out;
+}
+
+.logo-animation {
+    opacity: 0;
+    transform: scale(0.6);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+
+body.loaded .logo-animation {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+.custom-arrow {
+    cursor: url('../images/cursor.svg'), auto;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.top-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 5%;       
+    padding: 0;    
+}
+
+.bottom-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;              
+    margin-bottom: 5%;
+    padding: 0;
+}
+
+.button{
+    margin: 0;
+    padding: 0; 
+    font-size: large;
+    width: 30%;              
+    min-width: 100px;         
+    border: none;
+    border-radius: 10px;
+    color: black;
+    background: none;
+    text-align: center;
+    transition: transform 0.3s ease, font-weight 0.3s;
+    cursor: url('../images/cursor.svg'), auto;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+
+.button:hover {
+    transform: scale(1.1); 
+}
+
+.button:focus {
+    outline: none; 
+}
+
+.button.active {
+    font-weight: bold;
+}
+
+.button.inactive {
+    font-weight: normal;
+}
+
+.logo-animation {
+    opacity: 0;
+    transform: scale(0.6);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+
+body.loaded .logo-animation {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@media (max-width: 1300px) or (max-height: 700px){
+
+    body {
+        overflow: hidden
+    }
+    .top-buttons, .bottom-buttons {
+        display: none !important;
+    }
+
+    .menu-button {
+        display: block; 
+    }
+
+    .image-container {
+        position: relative;
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+    }
+
+    .image-container .image {
+        transform: translateX(0); 
+        height: 70vh; 
+        object-fit: contain; 
+        transition: transform 1.5s ease-in-out; 
+        width: 90%;
+        max-width: 90%;   
+    }
+
+}
+
+@media (min-width: 1300px) and (min-height: 700px) {
+
+    *:focus {
+        outline: none; /* Usuwa obramowanie z elementów, które zostały kliknięte/fokusowane */
+    }
+    
+    .top-buttons, .bottom-buttons {
+        display: block; 
+    }
+
+    .menu-button {
+        display: none; 
+    }
+
+    .image-container .image {
+        width: 25%; 
+        margin: 20px 20px; 
+    }
+
+    .header-phone {
+        display: none !important;
+    }
+}
+
+header {
+    width: 100%;
+}
+
+.menu-button {
+    background-color: white;
+    color: black;
+    border: none; 
+    display: block; 
+    width: 100%; 
+    font-size: 3rem; 
+    padding: 10px 0; 
+    cursor: url('../images/cursor.svg'), auto;   
+    text-align: center; 
+    transition: background-color 0.3s ease; 
+    position: relative;
+    z-index: 1001;
+}
+
+.menu-button:focus {
+    outline: none; 
+}
+
+
+.mobile-menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: fit-content;
+}
+
+.button {
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    border: none;
+    background: none;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+}
