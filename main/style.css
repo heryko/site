@@ -223,3 +223,7 @@ header {
     border-radius: 5px;
     display: block;
 }
+
+.hidden {
+    display: none;
+}
