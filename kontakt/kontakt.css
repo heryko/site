@@ -68,7 +68,18 @@
         outline: none; /* Usuwa obramowanie z elementów, które zostały kliknięte/fokusowane */
     }
     #main-container {
-        width: 90%; /* Ustawiamy szerokość na 95% na mniejszych ekranach */
+        position: fixed; /* Albo absolute, jeśli chcesz przewijania */
     }
+
+    .info-box { 
+        position: fixed; /* Albo absolute, jeśli chcesz przewijania */
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%); /* Wyśrodkowanie poziome */
+        max-height: calc(100vh - 150px);
+        width: 90%;
+        overflow-y: auto; /* Umożliwia przewijanie w pionie */
+    }
+    
 }
     

@@ -49,8 +49,11 @@ body {
         outline: none; /* Usuwa obramowanie z elementów, które zostały kliknięte/fokusowane */
     }
     #main-container {
-        margin-top: 40vh;
+        position: fixed;
+        top: 100px;
         width: 90%; /* Ustawiamy szerokość na 95% na mniejszych ekranach */
+        max-height: calc(100vh - 150px);
+        overflow-y: auto;
     }
 }
     

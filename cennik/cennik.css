@@ -1,65 +1,48 @@
-
 body {
     margin: 0;
     padding: 0;
     color: black;
     background-color: white;
     cursor: url('../images/cursor.svg'), auto;
-    overflow-y: auto; /* Enable vertical scrolling if content overflows */
     
-    /* Flexbox do centrowania zawartości */
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     height: 100vh; /* Full height of the viewport */
+
 }
 
 /* Kontener dla usług */
 .services-container {
     display: flex;
     flex-direction: column;
-    width: 90%; /* Adjust the width to be a percentage of the screen */
-    max-width: 800px; /* Max width to avoid large screens */
+    width: 90%;
+    max-width: 800px;
     padding: 10px;
-    
-}
-
-/* Lista usług z przewijaniem */
-.services-list {
-    height: 70vh; 
-    overflow-y: auto; 
-    overflow-x: hidden;
-
-    display: flex;
-    flex-direction: column; /* Ustawienie elementów w kolumnie */
-    justify-content: center; /* Wyśrodkowanie przycisków poziomo */
 }
 
 /* Styl dla pojedynczej usługi */
 .service {
     background-color: white;
     padding: 10px;
-    border-bottom: 1px solid white; 
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    
 }
 
 .service button {
-    
     align-items: center; 
     width: 95%; 
     color: black;
     font-size: 15px; 
-    border: 1px none black;
+    border: none;
     cursor: pointer;
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     transition: padding 0.3s, font-size 0.3s; 
     display: inline-flex;
     justify-content: center;
@@ -103,33 +86,30 @@ body {
 
 /* Styl dla drugiego przycisku */
 .second-button {
-    margin: 15px !important; /* Wymusza odstępy */
-    padding: 10px !important; /* Dopasowanie przestrzeni wewnętrznej */
+    margin: 15px !important;
+    padding: 10px !important;
 }
 
+/* Responsywność */
 @media (max-width: 1300px), (max-height: 700px) {
-
-    .body   {
-        overflow-y: auto; /* Enable vertical scrolling if content overflows */
-    }
-    .services-list {
-        height: 100vh; /* Zajmuje całą wysokość ekranu */
-        width: 100%; /* Zajmuje całą szerokość ekranu */
+    body {
+        overflow-y: auto;
     }
 
-    /* Zmiana rozmiaru przycisków dla lepszej responsywności */
+    /* Zmiana wysokości kontenera */
+    .services-container {
+        height: 100vh; /* Pełna wysokość ekranu */
+        width: 100%;
+        margin-top: 150px;
+    }
+
+    /* Zmiana rozmiaru przycisków */
     .service button {
         font-size: 12px;
         padding: 15px;
     }
 
-    .services-container {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 10vh;
-    }
     *:focus {
-        outline: none; /* Usuwa obramowanie z elementów, które zostały kliknięte/fokusowane */
+        outline: none;
     }
 }
