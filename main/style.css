@@ -92,21 +92,12 @@ body.loaded .logo-animation {
     text-decoration: none;
 }
 
-
-.button:hover {
+.button-index:hover {
     transform: scale(1.1); 
 }
 
-.button:focus {
+.button-index:focus {
     outline: none; 
-}
-
-.button.active {
-    font-weight: bold;
-}
-
-.button.inactive {
-    font-weight: normal;
 }
 
 .logo-animation {
@@ -154,7 +145,7 @@ body.loaded .logo-animation {
 @media (min-width: 1300px) and (min-height: 700px) {
 
     *:focus {
-        outline: none; /* Usuwa obramowanie z elementów, które zostały kliknięte/fokusowane */
+        outline: none; 
     }
     
     .top-buttons, .bottom-buttons {
@@ -207,10 +198,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    width: fit-content;
+    gap: 10px;
+    width: 95%;
     max-height: calc(100vh - 150px);
-    overflow-y: auto;
+    overflow-x: auto;
 }
 
 .button {

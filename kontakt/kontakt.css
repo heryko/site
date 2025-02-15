@@ -77,7 +77,7 @@
         left: 50%;
         transform: translateX(-50%); /* Wyśrodkowanie poziome */
         max-height: calc(100vh - 150px);
-        width: 90%;
+        width: 95%;
         overflow-y: auto; /* Umożliwia przewijanie w pionie */
     }
     

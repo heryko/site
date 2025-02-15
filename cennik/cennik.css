@@ -6,22 +6,36 @@ body {
     cursor: url('../images/cursor.svg'), auto;
     
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full height of the viewport */
-
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    text-align: center; 
+    overflow-x: hidden;
 }
 
-/* Kontener dla usług */
 .services-container {
     display: flex;
     flex-direction: column;
-    width: 90%;
-    max-width: 800px;
-    padding: 10px;
+    align-items: center; 
+    justify-content: flex-start; 
+    width: 50%;
+    padding: 20px;
+    text-align: center; 
+    overflow-y: none;
+    max-height: 80vh;
+    overflow-y: auto;
+    margin-top: 100px;
 }
 
-/* Styl dla pojedynczej usługi */
+.services-list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+    min-height: 100%;
+}
+
 .service {
     background-color: white;
     padding: 10px;
@@ -56,7 +70,6 @@ body {
     font-size: 17px;
 }
 
-/* Ukryte elementy */
 .hidden {
     display: none;
     height: 0; 
@@ -64,7 +77,6 @@ body {
     padding: 0;
 }
 
-/* Styl opisu */
 .description {
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -76,7 +88,6 @@ body {
     opacity: 1;
 }
 
-/* Styl nagłówka */
 .header {
     font-size: 24px; 
     font-weight: bold; 
@@ -84,32 +95,30 @@ body {
     color: black;
 }
 
-/* Styl dla drugiego przycisku */
 .second-button {
     margin: 15px !important;
     padding: 10px !important;
 }
 
-/* Responsywność */
 @media (max-width: 1300px), (max-height: 700px) {
-    body {
-        overflow-y: auto;
-    }
-
-    /* Zmiana wysokości kontenera */
     .services-container {
-        height: 100vh; /* Pełna wysokość ekranu */
-        width: 100%;
-        margin-top: 150px;
+        width: 90%;
+        max-height: 80vh;
+        justify-content: flex-start;
+        
+    }
+    
+    .service button {
+        font-size: 14px; 
+        padding: 12px;
     }
 
-    /* Zmiana rozmiaru przycisków */
-    .service button {
-        font-size: 12px;
-        padding: 15px;
-    }
+        .services-list{
+            width: 95%;
+        }
 
     *:focus {
         outline: none;
     }
 }
+
