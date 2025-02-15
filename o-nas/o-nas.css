@@ -51,7 +51,7 @@ body {
     #main-container {
         position: fixed;
         top: 100px;
-        width: 95%;
+        width: 98%;
         padding-left: 10%;
         padding-right: 10%;
         max-height: calc(100vh - 150px);

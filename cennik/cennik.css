@@ -102,7 +102,7 @@ body {
 
 @media (max-width: 1300px), (max-height: 700px) {
     .services-container {
-        width: 90%;
+        width: 100%;
         max-height: 80vh;
         justify-content: flex-start;
         
@@ -113,9 +113,9 @@ body {
         padding: 12px;
     }
 
-        .services-list{
-            width: 95%;
-        }
+    .services-list{
+        width: 95%;
+    }
 
     *:focus {
         outline: none;
